@@ -13,6 +13,7 @@ resource "scaleway_k8s_pool" "this" {
   container_runtime      = try(each.value.container_runtime, null)
   placement_group_id     = try(each.value.placement_group_id, null)
   kubelet_args           = try(each.value.kubelet_args, null)
+  public_ip_disabled     = try(each.value.public_ip_disabled, null)
   root_volume_type       = try(each.value.root_volume_type, null)
   root_volume_size_in_gb = try(each.value.root_volume_size_in_gb, null)
   security_group_id      = length(try(each.value.security_group_rules, [])) > 0 ? scaleway_instance_security_group.this[each.key].id : null
