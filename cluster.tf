@@ -1,3 +1,18 @@
+# Copyright 2020-2022 Particule.io
+# Copyright 2024-2025 Solution Libre
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 resource "scaleway_k8s_cluster" "this" {
   type        = var.cluster_type
   name        = var.cluster_name
@@ -18,7 +33,6 @@ resource "scaleway_k8s_cluster" "this" {
     scale_down_utilization_threshold = var.autoscaler_config.scale_down_utilization_threshold
     max_graceful_termination_sec     = var.autoscaler_config.max_graceful_termination_sec
   }
-
 
   dynamic "auto_upgrade" {
     for_each = var.auto_upgrade.enable ? [1] : []
@@ -51,5 +65,4 @@ resource "scaleway_k8s_cluster" "this" {
   region                      = var.region
   project_id                  = var.project_id
   delete_additional_resources = var.delete_additional_resources
-
 }

@@ -1,0 +1,39 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/go
+{
+	"name": "OpenTofu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "registry.solution-libre.fr/docker/opentofu-for-vscode:0.3.0",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"gitlab.gitlab-workflow",
+				"ymotongpoo.licenser",
+				"OpenTofu.vscode-opentofu",
+				"tfsec.tfsec",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"davidanson.vscode-markdownlint",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+
+	// ,"remoteEnv": {
+	//   "TF_LOG": "info",
+	//   "TF_LOG_PATH": "./terraform.log"
+	// }
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

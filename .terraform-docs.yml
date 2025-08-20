@@ -1,2 +1,4 @@
-settings:
-  lockfile: false
+formatter: markdown
+header-from: .terraform-docs-header.md
+output:
+  file: REFERENCE.md
