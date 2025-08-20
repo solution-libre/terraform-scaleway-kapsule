@@ -1,0 +1,9 @@
+{
+	"licenser.projectName": "Scaleway Kapsule Terraform module",
+	"licenser.license": "AL2",
+	"[opentofu][opentofu-vars]": {
+		"editor.defaultFormatter": "opentofu.vscode-opentofu",
+		"editor.formatOnSave": true,
+		"editor.formatOnSaveMode": "file"
+	}
+}

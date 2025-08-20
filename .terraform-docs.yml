@@ -1,3 +1,6 @@
 settings:
   lockfile: false
 formatter: md
+header-from: .terraform-docs-header.md
+output:
+  file: REFERENCE.md
