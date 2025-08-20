@@ -47,6 +47,7 @@ resource "scaleway_k8s_pool" "this" {
 
 resource "random_pet" "this" {
   for_each = local.node_pools
+
   keepers = {
     placement_group_id = try(each.value.placement_group_id, null)
     zone               = try(each.value.zone, null)
