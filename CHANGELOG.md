@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Fork from <https://github.com/particuleio/terraform-scaleway-kapsule/>
+- Bump `kubernetes_version` input variable default value from "1.24.5" to "1.32.3"
 
 ### Fixed
 
