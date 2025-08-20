@@ -139,7 +139,7 @@ variable "node_pools" {
 variable "node_pools_defaults" {
   default     = {}
   description = "Default configuration for Kubernetes cluster pools"
-  type        = map(any)
+  type        = any
 }
 
 variable "tags" {
