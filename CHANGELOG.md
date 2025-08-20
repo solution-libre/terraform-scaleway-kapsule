@@ -7,10 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
 
-## [8.0.0] 2025-08-20
+## [8.0.0] - 2025-08-20
 
 ### Added
 
-- 
+- `private_network_id` input variable to set the ID of the private network the cluster is associated with
+- `public_ip_disabled` parameter of `scaleway_k8s_pool` resource
+
+### Changed
+
+- Fork from <https://github.com/particuleio/terraform-scaleway-kapsule/>
+
+### Fixed
+
+- Wrong variable type for maintenance window day
 
 [8.0.0]: https://usine.solution-libre.fr/french-high-availability-multi-cloud-hosting/terraform-modules/scaleway-kapsule/-/tags/v8.0.0
