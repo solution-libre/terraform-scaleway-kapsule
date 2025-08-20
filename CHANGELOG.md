@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `private_network_id` input variable to set the ID of the private network the cluster is associated with
-- `public_ip_disabled` parameter of `scaleway_k8s_pool` resource
+- `public_ip_disabled`, `root_volume_size_in_gb`, `root_volume_type` and `security_group_id` parameters of
+`scaleway_k8s_pool` resource
 
 ### Changed
 
