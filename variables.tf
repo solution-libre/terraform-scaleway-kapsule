@@ -78,6 +78,8 @@ variable "autoscaler_config" {
     expendable_pods_priority_cutoff  = optional(number)
     scale_down_utilization_threshold = optional(number)
     max_graceful_termination_sec     = optional(number)
+    log_level                        = optional(number)
+    skip_nodes_with_local_storage    = optional(bool)
   })
   description = "The configuration options for the Kubernetes cluster autoscaler"
 }

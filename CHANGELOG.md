@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
 
+## [Unreleased]
+
+### Added
+
+- `log_level` and `skip_nodes_with_local_storage` options to the `autoscaler_config` input variable,
+exposing the matching `scaleway_k8s_cluster` autoscaler arguments
+
 ## [8.0.0] - 2025-08-20
 
 ### Added
