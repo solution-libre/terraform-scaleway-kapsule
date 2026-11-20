@@ -2,7 +2,8 @@
 
 Thanks for contributing to `terraform-kubernetes-addons`.
 
-For larger changes, please open an issue first so the module scope, provider behavior, and compatibility expectations are clear before implementation.
+For larger changes, please open an issue first so the module scope, provider behavior, and compatibility expectations
+are clear before implementation.
 
 ## Pull Request Process
 
@@ -22,12 +23,14 @@ For larger changes, please open an issue first so the module scope, provider beh
 
 - Terraform compatibility is documented from the Terraform view of each module.
 - OpenTofu compatibility is handled with `.tofu` override files where needed.
-- Do not duplicate provider constraints in `.tofu` files. Keep provider constraints in `versions.tf` unless a runtime-specific override is required.
+- Do not duplicate provider constraints in `.tofu` files. Keep provider constraints in `versions.tf` unless a
+runtime-specific override is required.
 - If a `.tofu` file changes module compatibility, mention that in the module README outside the generated docs block.
 
 ## Documentation
 
-Module README files are generated with `terraform-docs` through the repository pre-commit hook. The hook intentionally excludes `.tofu` override files from the docs input so Terraform provider and requirement tables remain stable.
+Module README files are generated with `terraform-docs` through the repository pre-commit hook. The hook intentionally
+excludes `.tofu` override files from the docs input so Terraform provider and requirement tables remain stable.
 
 Update documentation when changing:
 
