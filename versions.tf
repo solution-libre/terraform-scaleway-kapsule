@@ -1,5 +1,5 @@
 # Copyright 2020-2022 Particule.io
-# Copyright 2025 Solution Libre
+# Copyright 2025-2026 Solution Libre
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
