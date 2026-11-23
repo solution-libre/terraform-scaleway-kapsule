@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
 
+## [8.2.0]
+
+### Added
+
+- Support `taints` and `startup_taints` for Kubernetes node pools
+
 ## [8.1.0]
 
 ### Added
@@ -43,5 +49,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Wrong variable type for maintenance window day
 
+[8.2.0]: https://usine.solution-libre.fr/french-high-availability-multi-cloud-hosting/terraform-modules/scaleway-kapsule/-/compare/8.1.0...8.2.0
 [8.1.0]: https://usine.solution-libre.fr/french-high-availability-multi-cloud-hosting/terraform-modules/scaleway-kapsule/-/compare/8.0.0...8.1.0
 [8.0.0]: https://usine.solution-libre.fr/french-high-availability-multi-cloud-hosting/terraform-modules/scaleway-kapsule/-/tags/v8.0.0
