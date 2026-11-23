@@ -21,8 +21,30 @@ module "kaspule" {
   source  = "solution-libre/kaspule/scaleway"
   
   cluster_name = "my-cluster"
+
+  node_pools = {
+    workers = {
+      node_type = "DEV1-M"
+      size      = 2
+      taints = [
+        {
+          key    = "dedicated"
+          value  = "workers"
+          effect = "NoSchedule"
+        }
+      ]
+      startup_taints = [
+        {
+          key    = "initializing"
+          effect = "NoSchedule"
+        }
+      ]
+    }
+  }
 }
 ```
+
+`taints` are reconciled on the nodes; `startup_taints` are applied only at node creation.
 
 ## Reference
 

@@ -33,6 +33,26 @@ resource "scaleway_k8s_pool" "this" {
   root_volume_size_in_gb = try(each.value.root_volume_size_in_gb, null)
   security_group_id      = length(try(each.value.security_group_rules, [])) > 0 ? scaleway_instance_security_group.this[each.key].id : null
 
+  dynamic "taints" {
+    for_each = try(each.value.taints, [])
+
+    content {
+      key    = taints.value.key
+      value  = try(taints.value.value, null)
+      effect = taints.value.effect
+    }
+  }
+
+  dynamic "startup_taints" {
+    for_each = try(each.value.startup_taints, [])
+
+    content {
+      key    = startup_taints.value.key
+      value  = try(startup_taints.value.value, null)
+      effect = startup_taints.value.effect
+    }
+  }
+
   upgrade_policy {
     max_surge       = try(each.value.upgrade_policy.max_surge, null)
     max_unavailable = try(each.value.upgrade_policy.max_unavailable, null)
